@@ -28,6 +28,6 @@ if(minisuggest__button!=undefined){
             break;
         }
     }
-    if(currentPage>10) location.href = "https://www.yandex.ru/";
+    if(currentPage>5) location.href = "https://www.yandex.ru/";
     else if(nextPage) pnnext.click();
 }

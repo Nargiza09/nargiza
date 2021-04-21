@@ -19,7 +19,7 @@ if(minisuggest__button!=undefined){
 }else{
     let links = document.links;
     let nextPage = true;
-    let currentPage = document.getElementsByClassName("")[0].innerText;
+    let currentPage = document.getElementsByClassName("link link_theme_none link_target_serp pager__item pager__item_kind_page i-bem")[0].innerText;
     for(let i=0; i<links.length; i++){
         let link = links[i];
         if(link.href.indexOf("divo-dacha.ru") != -1){
@@ -28,6 +28,7 @@ if(minisuggest__button!=undefined){
             break;
         }
     }
-    if(currentPage>5) location.href = "https://www.yandex.ru/";
-    else if(nextPage) pnnext.click();
+    let nextButton = document.getElementsByClassName("link link_theme_none link_target_serp pager__item pager__item_kind_next i-bem link_js_inited")[0];
+    if(currentPage>3) location.href = "https://www.yandex.ru/";
+    else if(nextPage)nextButton.click();
 }
